@@ -1,0 +1,43 @@
+<head>
+    <link rel="stylesheet" href="/css/job.css">
+</head>
+
+
+<div class="conteiner1">
+    <h1>{{job.title}}</h1>
+</div>
+
+<div class="conteiner2">
+    <h3>{{job.companyId.name}}</h3>
+    <div class="conteiner2_1">
+        <ul>
+            <li>Tipo de empresa:{{job.companyId.type}}</li>
+            <li>Cidade: {{job.companyId.city}}</li>
+            <li>Salário:  R${{job.salary}}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="conteiner3">
+    <h3>Descrição da empresa</h3>
+    <p>
+       {{job.companyId.description}}
+    </p>
+</div>
+
+<div class="conteiner4">
+    <h3>Atividades e Responsabilidades</h3>
+    <p>{{job.description}}</p>
+</div>
+<form action="/users/job/{{job._id}}" method="POST">
+    <input type="hidden" name="userId" value="{{session.user._id}}" >
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+   {{#if applyed}}   
+    <h5>Já se candiddatou!</h5>     
+       {{else}}
+        <button class="btn1">Candidatar</button>
+       {{/if}}
+</form>
+
+
+{{>end}}

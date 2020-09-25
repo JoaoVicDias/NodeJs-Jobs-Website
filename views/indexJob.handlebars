@@ -1,0 +1,50 @@
+<head>
+    <link rel="stylesheet" href="/css/indexJob.css">
+</head>
+
+<div class="conteiner1">
+    <h3>Vagas para Programadores e Desenvolvedores</h3>
+    <form action="/jobs/searchTitle/?page=1" method="POST">
+        <input type="text" name="title" placeholder="Pesquisar pelo titulo">
+        <input type="hidden" name="_csrf" value={{csrfToken}}>
+        <button>Pesquisar</button>
+    </form>
+</div>
+{{#if vaga}}
+{{#each vaga}}
+<div class="vagas">
+    <a href="/job/{{_id}}">
+        <h4>{{title}}</h4>
+    <ul>
+        <li>{{companyId.name}}</li>
+        <li>{{companyId.city}}</li>
+        <li>Tipo de empresa: {{companyId.type}}</li><br>
+        <li>Salário:{{salary}}</li>
+    </ul>
+    </a>   
+    <p>This website is not for real.</p>
+        <hr>
+</div>
+{{/each}}
+
+<section class="pagination"> 
+    {{#if ask1}}
+    <a href="/jobs/?page=1">1</a>
+    {{/if}}
+    <a href="/jobs/?page={{currentPage}}" class="active">{{currentPage}}</a>
+    {{#if ask2}}
+    <a href="/jobs/?page={{nextPage}}">{{nextPage}}</a>
+    {{/if}}
+    {{#if ask3}}
+    <a href="/jobs/?page={{lastPage}}">{{lastPage}}</a>
+    {{/if}}
+</section>
+
+{{else}}
+
+<div class="not_found">
+<h2>Nenhuma vaga encontrada!</h2>
+</div>
+{{/if}}
+
+{{>end}}

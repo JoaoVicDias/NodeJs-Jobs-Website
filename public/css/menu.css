@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.liVaga{
+    color: #32B796;
+}
+.liVaga:hover{
+    color: #19232d;
+    background: #eee;
+    padding: 24px 20px;
+}
+.liCadastro strong{
+    color: white;
+    background-color:#34495E;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 6px 12px;
+}
+.liCadastro strong:hover{
+    color: #fff;
+    background-color: #22303d;
+    border-color: #151e26;
+    cursor: pointer;
+}
+.menu{
+    list-style: none;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07), 0 1px 0 0 rgba(0,0,0,0.03);
+    background: white;
+    z-index: 999;
+    display: flex;
+    position: fixed;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.restLi{
+    color: #34495E;
+}
+.restLi:hover{
+    color: #19232d;
+    background: #eee;
+    padding: 24px 20px;
+    cursor: pointer;
+}
+.menu ul li{
+    display: inline;
+    list-style: none;
+    padding: 24px 20px;
+}
+.menu img{
+    width: 370px;   
+}
+.clickMenu{
+    position: fixed;
+    top: 9%;
+    right:13%;
+    z-index:1000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    text-align: center;
+    display: none;
+
+}
+.clickMenu ul li {
+    list-style: none;
+    padding: 3px 20px;
+    color: #333333;
+    margin-top: 20px;
+    width: 160px;
+}
+.clickMenu ul li:hover{
+    color: #262626;
+    background-color: #f5f5f5;
+}
+.clickMenu2{
+    position: fixed;
+    top: 9%;
+    right:0;
+    z-index:1000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    text-align: center;
+    display: none;
+}
+.clickMenu2 ul li {
+    list-style: none;
+    padding: 3px 20px;
+    color: #333333;
+    margin-top: 20px;
+    width: 160px;
+}
+.clickMenu2 ul li:hover{
+    color: #262626;
+    background-color: #f5f5f5;
+}
+.clickMenu3{
+    position: fixed;
+    top: 9%;
+    right:0%;
+    z-index:1000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    text-align: center;
+    display: none;
+}
+.clickMenu3 ul li {
+    list-style: none;
+    padding: 3px 20px;
+    color: #333333;
+    margin-top: 20px;
+    width: 100px;
+}
+.clickMenu3 ul li:hover{
+    color: #262626;
+    background-color: #f5f5f5;
+}
+.clickMenu4{
+    position: fixed;
+    top: 9%;
+    right:0%;
+    z-index:1000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    text-align: center;
+    display: none;
+}
+.clickMenu4 ul li {
+    list-style: none;
+    padding: 3px 20px;
+    color: #333333;
+    margin-top: 20px;
+    width: 100px;
+}
+.clickMenu4 ul li:hover{
+    color: #262626;
+    background-color: #f5f5f5;
+}
+
+
+@media (max-width:667px){
+.clickMenu{
+    top: 4%;
+}
+.clickMenu2{
+    top: 4%;
+}
+.clickMenu3{
+    top: 4%;
+}
+.clickMenu4{
+    top: 4%;
+}
+}
+
+

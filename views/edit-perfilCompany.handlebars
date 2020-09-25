@@ -1,0 +1,30 @@
+<head>
+    <link rel="stylesheet" href="/css/edit-perfil.css">
+</head>
+
+<div class="conteiner1">
+    <h2>Editar o perfil da minha empresa</h2>
+</div>
+
+<div class="conteiner2">
+    <form action="/companies/edit" method="post">
+        {{#if errorMessage}}
+                <div class="error_msg">
+                    {{errorMessage}}
+                </div>
+        {{/if}}
+        <label  for="name">Nome:</label><br>
+            <input  class={{name2}} type="text" name="name" value={{session.company.name}}><br>
+        <label  for="city">Cidade:</label><br>
+            <input class={{city2}} type="text" name="city"  value={{session.company.city}}> <br>
+        <label for="type">Tipo de Empresa</label><br>
+            <input class={{type2}} type="text " placeholder="G,M ou P" name="type" value={{session.company.type}}><br>
+        <label  for="aboutyou">Descrição de sua empresa:</label><br><br>
+            <textarea   cols="30" name="description" rows="10">{{session.user.description}}</textarea><br>
+            <input type="hidden" name="_id" value={{session.company._id}}>
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+        <button type="submit">Salvar</button>
+    </form>
+</div>
+
+

@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="/css/edit-perfil.css">
+</head>
+
+<div class="conteiner1">
+    <h2>Editar meu perfil</h2>
+</div>
+
+<div class="conteiner2">
+    <form action="/users/edit" method="post">
+        {{#if errorMessage}}
+                <div class="error_msg">
+                    {{errorMessage}}
+                </div>
+        {{/if}}
+        <label  for="name">Nome:</label><br>
+            <input  class={{name2}} type="text" name="name" value={{session.user.name}}><br>
+        <label  for="lastname">Sobrenome:</label><br>
+            <input  class={{lastname2}} type="text" name="lastname" value={{session.user.lastname}}> <br>
+        <label  for="city">Cidade:</label><br>
+            <input class={{city2}} type="text" name="city"  value={{session.user.city}}> <br>
+        <label  for="linkedin">Linkedin url:</label><br>
+            <input  class={{linkedinurl2}} type="text" name="linkedinurl" value={{session.user.linkedinurl}}> <br>
+        <label  for="github">Github/Gitlab/Stack url:</label><br>
+            <input  class={{githuburl2}} type="text" name="githuburl" value={{session.user.githuburl}}> <br>
+        <label  for="aboutyou">Suas Habilidades:</label><br><br>
+            <textarea   cols="30" name="skill" rows="10">{{session.user.skill}}</textarea><br>
+            <input type="hidden" name="_id" value={{session.user._id}}>
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+        <button type="submit">Salvar</button>
+    </form>
+</div>
+
+
+

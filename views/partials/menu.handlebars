@@ -1,0 +1,58 @@
+<head>
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+<section>
+    <div class="menu">
+            <a href="/"><img src="/img/logotipo.png" alt="Logo"></a>
+            <ul>
+                <a href="/jobs/?page=1"><li class="liVaga">VER VAGAS</li></a>
+                {{#if session.user}}
+                <li id="name" class="restLi">{{session.user.name}}</li>
+                {{else}}
+                {{#if session.company}}
+                <li id="nameCompany" class="restLi">{{session.company.name}}</li>
+                {{else}}
+                <a href="/recruiter"><li class="restLi">SOU EMPRESA</li></a>
+                <li id="login" class="restLi">LOGIN</li>
+                <li class="liCadastro"><strong class="liCadastro1">CADASTRAR-SE</strong></li>
+            </ul>
+            {{/if}}
+            {{/if}}
+    </div>
+</section>
+
+    <div class="clickMenu">
+                <ul>
+                    <a href="/users/sign_in"><li>Como canditado</li></a>
+                    <a href="/companies/sign_in"><li>Como empresa</li></a>
+                </ul>
+    </div>
+    <div class="clickMenu2">
+                <ul>
+                    <a href="/users/sign_up"><li>Como canditado</li></a>
+                    <a href="/companies/sign_up"><li>Como empresa</li></a>
+                </ul>
+    </div>
+    <div class="clickMenu3">
+        <ul>
+            <a href="/users/perfil/?page=1"><li>Perfil</li></a>
+            <a href="/users/perfil/?page=1"><li>Candidaturas</li></a>
+            <a href="/users/edit"><li>Editar perfil</li></a>
+            <a href="/users/logout"><li>Sair</li></a>
+        </ul>
+    </div>
+    <div class="clickMenu4">
+        <ul>
+            <a href="/companies/perfil/?page=1"><li>Perfil</li></a>
+            <a href="/companies/Createjob"><li>Criar vaga</li></a>
+            <a href="/companies/edit"><li>Editar perfil</li></a>
+            <a href="/companies/logout"><li>Sair</li></a>
+        </ul>
+    </div>
+    
+    
+    
+
+<script src="/js/menu.js"></script>
+<script src="/js/menuLoggedUser.js"></script>
+<script src="/js/menuLoggedCompany.js"></script>

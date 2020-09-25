@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="/css/createJob.css">
+</head>
+
+<div class="conteiner1">
+    <h2>Criar uma nova vaga</h2>
+</div>
+
+<div class="conteiner2">
+    <form action="/companies/Createjob" method="post">
+        {{#if errorMessage}}
+                <div class="error_msg">
+                    {{errorMessage}}
+                </div>
+        {{/if}}
+        <label  for="title">Titulo:</label><br>
+            <input  class={{title2}} type="text" name="title"><br>
+        <label  for="salary">Salário:</label><br>
+            <input class={{salary2}} type="number" name="salary"> <br>
+        <label  for="aboutyou">Descrição da vaga:</label><br><br>
+            <textarea   cols="30" name="description" rows="10"></textarea><br>
+            <input type="hidden" name="_id" value={{session.company._id}}>
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+        <button type="submit">Criar</button>
+    </form>
+</div>
+
+

@@ -1,0 +1,92 @@
+.conteiner1{
+    background-color: #35618d;
+    padding-top: 100px;
+    width: 100%;
+    min-height: 24vh;
+}
+.conteiner1 h3{
+    text-align: center;
+    color: white;
+    margin: 0 0 30px 0;
+    font-size: 32px;
+    padding-top: 40px;
+}
+.vagas{
+    text-align: center;
+    margin-top: 100px;
+}
+.vagas h4{
+    margin-top: 40px;
+    font-size: 28px;
+    color: #34495E;
+}
+.vagas ul li{
+    display: inline;
+    margin-right: 20px;
+    color: initial;
+}
+.vagas h6{
+    font-size: 20px;
+    margin-left: 1200px;
+    margin-top: -80px;
+}
+.vagas p{
+    padding-top: 20px;
+    color: initial;
+}
+.pagination{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.pagination a{
+    text-decoration: none;
+    color: #35618d;
+    padding: 0.5rem;
+    border: 1px solid #34495E;
+    margin: 0 1rem;
+}
+.pagination a:hover,
+.pagination a.active,
+.pagination a:active{
+    background: #35618d;
+    color: white;
+}
+.not_found{
+    text-align: center;
+    margin-bottom: 150px;
+}
+@media(max-width:667px){
+.conteiner1{
+    width: 1500px;
+}
+.conteiner1 h3{
+    font-size: 52px;
+}
+.vagas{
+    width: 1500px;
+}
+.vagas h4{
+    font-size: 48px;
+}
+.vagas ul li{
+    font-size: 25px;
+}
+.vagas h6{
+    font-size: 25px;
+}
+.vagas p{
+    font-size: 20px;
+}
+.pagination{
+    margin-left: 700px;
+}
+.pagination a{
+    padding: 1rem;
+
+}
+.not_found{
+    width: 1500px;
+    font-size: 30px;
+}
+}

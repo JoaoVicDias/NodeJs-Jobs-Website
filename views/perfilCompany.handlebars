@@ -1,0 +1,72 @@
+<head>
+    <link rel="stylesheet" href="/css/perfilCompany.css">
+</head>
+
+<div class="conteiner1">
+    <div class="conteiner1_1">
+        <h2>{{session.company.name}}</h2>
+        <p>{{session.company.email}}</p>
+        <a href="/companies/edit">Editar meu perfil</a>
+    </div>
+    <div class="conteiner1_2">
+        <ul>
+            <a href="/companies/perfil"><li>Perfil</li></a>
+            <a href="/companies/Createjob"><li>Criar vaga</li></a>
+            <a href="/companies/logout"><li>sair</li></a>
+        </ul>
+    </div>
+</div>
+
+<div class="conteiner2">
+    <div class="conteiner2_1">
+        <h2>Bem-vindo</h2>
+        <a href="/companies/Createjob">Criar uma vaga</a>
+        <p>Minhas vagas:</p>
+    </div>
+        {{#if vaga}}
+        {{#each vaga}}
+    <div class="vagas">
+        <a href="/job/{{_id}}">
+            <h4>{{title}}</h4>
+        <ul>
+            <li>{{companyId.name}}</li>
+            <li>{{companyId.city}}</li>
+            <li>Tipo de empresa: {{companyId.type}}</li><br>
+            <li>Salário:R${{salary}}</li>
+        </ul>
+        </a>
+        <a href="/companies/job/users/{{_id}}/?page=1" class="users">Usuarios cadastrados</a><br>
+        <button class="edit"><a href="/companies/editJob/{{_id}}" >Editar vaga</a></button>
+         <form action="/companies/delete" method="POST">
+            <input type="hidden" name="id" value={{_id}}>
+            <input type="hidden" name="_csrf" value={{../csrfToken}}>
+            <button class="delete" type="submit">Deletar</button>
+        </form>
+        <p>This website is not for real.</p>
+        <hr>
+    </div>
+    {{/each}}
+    <section class="pagination"> 
+    {{#if ask1}}
+    <a href="/companies/perfil/?page=1">1</a>
+    {{/if}}
+    <a href="/companies/perfil/?page={{currentPage}}" class="active">{{currentPage}}</a>
+    {{#if ask2}}
+    <a href="/companies/perfil/?page={{nextPage}}">{{nextPage}}</a>
+    {{/if}}
+    {{#if ask3}}
+    <a href="/companies/perfil/?page={{lastPage}}">{{lastPage}}</a>
+    {{/if}}
+</section>
+    {{else}}
+    <div class="conteiner2_2">
+        <p>Você ainda não possui vagas!</p>
+        <a href="/companies/Createjob">Criar uma vaga</a>
+    </div>
+    <div class="conteiner2_3">
+        <p>
+            Publique sua vaga na  programathor para ter acesso à  toda nossa database e encontrar  seu próximo desenvolvedor.
+        </p>
+    </div>
+    {{/if}}
+</div>

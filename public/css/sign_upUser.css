@@ -1,0 +1,215 @@
+body{
+    background-color: #34495E;
+}
+.conteiner1{
+    text-align: center;
+    padding-top: 100px;
+}
+.conteiner1 h1{
+    color: white;
+    font-size: 41px;
+}
+.conteiner2{
+    text-align: center;
+    margin-top: 100px;
+    margin-left: -600px;
+}
+.conteiner2_1 img{
+    width: 120px;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 20px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-image: initial;
+}
+.conteiner2_1 h2{
+    color: #E0E0E0;
+    margin: 0;
+    font-size: 30px;
+}
+.conteiner2_1 h4{
+    color: #a6a6a6;
+    font-size: 20px;
+    margin: 0;
+    font-style: oblique;
+}
+.conteiner2_2 p{
+    font-size: 1em;
+    padding: 50px 20px 40px 20px;
+    margin-top: 30px;
+    position: relative;
+    color: #E0E0E0;
+    border-left: none;
+    margin-top: 0;
+    opacity: 0.9;
+    margin-left: 35%;
+    width: 600px;
+}
+.conteiner2_2 span{
+    font-weight: bold;
+    color: #fffdfd;
+    opacity: 1;
+}
+.conteiner3{
+    text-align: center;
+    margin-top: -480px;
+    margin-left: 600px;
+}
+.conteiner3 li{
+    display: inline;
+    padding: 20px 100px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #eee;
+    border-radius: 1px;
+    border-bottom: none;
+}
+.active{
+   background: #ffffff;
+   color: #34495E;
+}
+.active:hover{
+    color: #273646;
+}
+.deactivated{
+     background: rgb(219, 219, 219);
+     color: #808080;
+}
+.deactivated:hover{
+    color: #34495E;
+    background: rgb(172, 170, 170);
+    border: 1px solid rgb(172, 170, 170);
+}
+.conteiner3_2{
+    background: #ffffff;
+    margin-top: 20px;
+    padding-top: 100px;
+    width: 506px;
+    margin-left: 206px;
+    text-align:left;
+    padding-left: 40px;
+    height: 450px;
+}
+.conteiner3_2 label{
+    font-family: sans-serif;
+    font-size: 15px;
+    max-width: 100%;
+    font-weight: bold;
+}
+.conteiner3_2 .valid{
+    width: 90%;
+    color: rgb(51, 51, 51);
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.conteiner3_2 p{
+    margin-top: -10px;
+    color: #737373;
+    font-size: 14px;
+}
+.conteiner3_2 button{
+    color: #fff;
+    background-color: #32B796;
+    border: none;
+    padding: 10px 12px;
+    font-size: 20px;
+    line-height: 1.3333333;
+    border-radius: 2px;
+    width: 95%;
+    margin-top: 40px;
+}
+.conteiner3_2 button:hover{
+    background-color: #278f75;
+    border-color: #1f735e;
+    cursor: pointer;
+}
+.conteiner3_3{
+    text-align: center;
+    border-radius:4px;
+    background-color: #F4F4F4;
+    margin-top: 40px;
+    height: 200px;
+    width: 107%;
+    margin-left: -38px;
+    padding-top: 5px;
+}
+.conteiner3_3 a{
+    color: #34495e;
+}
+.error_msg{
+    color: #A94453;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    margin-right:35px;
+    margin-top: -40px;
+}
+.invalid {
+    width: 90%;
+    color: rgb(51, 51, 51);
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000000;
+    border-color: red;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+@media(max-width:667px){
+.conteiner1{
+    width: 1300px;
+}
+.conteiner1 h1{
+    font-size: 51px;
+}
+.conteiner2{
+    width: 1300px;
+    margin-left: -400px;
+}
+.conteiner2_1 img{
+    width: 220px;
+}
+.conteiner2_1 h2{
+    font-size: 40px;
+}
+.conteiner2_1 h4{
+    font-size: 30px;
+}
+.conteiner2_2 p{
+    font-size: 1.2em;
+    margin-left: 30%;
+}
+.conteiner3{
+    width: 1300px;
+    margin-top: -480px;
+    margin-left: 600px;
+}
+.conteiner3_1 ul {
+    margin-left: -880px;
+}
+.conteiner3_1 ul li{
+    margin-right: -544px;
+}
+
+
+}
+

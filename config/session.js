@@ -1,0 +1,1 @@
+module.exports = {secret: '3434557800'}

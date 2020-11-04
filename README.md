@@ -20,7 +20,7 @@ I developed this site with the intention of improving my knowledge in web progra
 2. ExpressJS - as HTTP framework
 3. Heroku - as cloud platform
 4. Mongodb - as Data base
-5. Handlebars -as FrontEnd
+5. Handlebars - as FrontEnd
 
 ## Want to say something?
 If you have any question, suggestion or something, please feel free to open an issue. I'll be happy to answer it! :)

@@ -1,52 +1,104 @@
 <head>
     <link rel="stylesheet" href="/css/menu.css">
 </head>
-<section>
-    <div class="menu">
-            <a href="/"><img src="/img/logotipo.png" alt="Logo"></a>
-            <ul>
-                <a href="/jobs/?page=1"><li class="liVaga">VER VAGAS</li></a>
+<header class="main_header">
+    <div class="main_header_div--img">
+        <a href="/"><img class="main_header--img" src="/img/logotipo.png" alt="Logo"></a>
+    </div>
+    <nav class="main_header--nav">
+        {{#if session.user}}
+            <button class="toggle-button toggle-button__user">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button>
+        {{else}}
+        {{#if session.company}}
+            <button class="toggle-button toggle-button__company">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                </button>
+
+        {{else}}
+            <button class="toggle-button">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button>
+        {{/if}}
+        {{/if}}
+        <ul class="header_list--itens">
+                <a href="/jobs/?page=1"><li class="header_list--item liVaga">VER VAGAS</li></a>
                 {{#if session.user}}
-                <li id="name" class="restLi">{{session.user.name}}</li>
+                <li id="name" class="header_list--item restLi">{{session.user.name}}</li>
                 {{else}}
                 {{#if session.company}}
-                <li id="nameCompany" class="restLi">{{session.company.name}}</li>
+                <li id="nameCompany" class="header_list--item restLi">{{session.company.name}}</li>
                 {{else}}
-                <a href="/recruiter"><li class="restLi">SOU EMPRESA</li></a>
-                <li id="login" class="restLi">LOGIN</li>
-                <li class="liCadastro"><strong class="liCadastro1">CADASTRAR-SE</strong></li>
+                <a href="/recruiter"><li class="header_list--item restLi">SOU EMPRESA</li></a>
+                <li id="login" class="header_list--item restLi">LOGIN</li>
+                <li class="header_list--item liCadastro"><strong class="liCadastro1">CADASTRAR-SE</strong></li>
             </ul>
             {{/if}}
             {{/if}}
-    </div>
-</section>
+    </nav>
+            
+</header>
 
     <div class="clickMenu">
-                <ul>
+                <ul class="click_menu--itens">
                     <a href="/users/sign_in"><li>Como canditado</li></a>
                     <a href="/companies/sign_in"><li>Como empresa</li></a>
                 </ul>
     </div>
-    <div class="clickMenu2">
-                <ul>
+    <div class="clickMenu clickMenu2">
+                <ul class="click_menu--itens">
                     <a href="/users/sign_up"><li>Como canditado</li></a>
                     <a href="/companies/sign_up"><li>Como empresa</li></a>
                 </ul>
     </div>
-    <div class="clickMenu3">
-        <ul>
+    <div class="click_menu_logged">
+        <ul class="click_menu_list-logged">
             <a href="/users/perfil/?page=1"><li>Perfil</li></a>
             <a href="/users/perfil/?page=1"><li>Candidaturas</li></a>
             <a href="/users/edit"><li>Editar perfil</li></a>
             <a href="/users/logout"><li>Sair</li></a>
         </ul>
     </div>
-    <div class="clickMenu4">
-        <ul>
+    <div class="click_menu_logged menu_logged--company">
+        <ul class="click_menu_list-logged">
             <a href="/companies/perfil/?page=1"><li>Perfil</li></a>
             <a href="/companies/Createjob"><li>Criar vaga</li></a>
             <a href="/companies/edit"><li>Editar perfil</li></a>
             <a href="/companies/logout"><li>Sair</li></a>
+        </ul>
+    </div>
+    <div class="click_menu_logged responsive_menu">
+        <ul class="click_menu--itens">
+           <a href="/jobs/?page=1" class="click_menu--itens"><li>VER VAGAS</li></a>
+           <a href="/users/sign_in" class="click_menu--itens"><li>LOGIN COMO CANDIDATO</li></a>
+            <hr class="responsive_line">
+           <a href="/recruiter" class="click_menu--itens"><li>SOU EMPRESA</li></a>
+           <a href="/companies/sign_in" class="click_menu--itens"><li>LOGIN COMO EMPRESA</li></a>
+        </ul>
+    </div>
+    <div class="click_menu_logged responsive_menu--company">
+        <ul class="click_menu--itens">
+           <a href="/jobs/?page=1" class="click_menu--itens"><li>VER VAGAS</li></a>
+           <a href="/companies/perfil/?page=1" class="click_menu--itens"><li>Perfil</li></a>
+           <a href="/companies/Createjob" class="click_menu--itens"><li>Criar vaga</li></a>
+           <a href="/companies/edit" class="click_menu--itens"><li>Editar perfil</li></a>
+           <a href="/companies/logout" class="click_menu--itens"><li>Sair</li></a>
+        </ul>
+    </div>
+    <div class="click_menu_logged responsive_menu--user">
+        <ul class="click_menu--itens">
+           <a href="/jobs/?page=1" class="click_menu--itens"><li>VER VAGAS</li></a>
+           <a href="/users/perfil/?page=1" class="click_menu--itens"><li>Perfil</li></a>
+           <a href="/users/perfil/?page=1" class="click_menu--itens"><li>Candidaturas</li></a>
+           <a href="/users/edit" class="click_menu--itens"><li>Editar perfil</li></a>
+           <a href="/users/logout" class="click_menu--itens"><li>Sair</li></a>
         </ul>
     </div>
     

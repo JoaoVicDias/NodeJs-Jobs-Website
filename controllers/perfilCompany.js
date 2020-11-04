@@ -67,6 +67,7 @@ exports.getEdit = (req,res,next)=>{
     })
 }
 
+
 exports.postEdit = (req,res,next)=>{
     const errors = validationResult(req)
     const title = req.body.title
@@ -83,8 +84,9 @@ exports.postEdit = (req,res,next)=>{
             errorMessage:errors.array()[0].msg
         })
     }
+    console.log(id)
     Job.findById(id).then((job)=>{
-            job.update({
+        job.update({
                 title:title,
                 salary:salary,
                 description:description

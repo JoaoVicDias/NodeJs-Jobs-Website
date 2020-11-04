@@ -42,7 +42,7 @@ function language (){
     setInterval(function(){
         currentL++
         if(currentL>= qtd) currentL = 0
-        let newHeigth = ( heigthCarrosel +30) * currentL * -1
+        let newHeigth = heigthCarrosel  * currentL * -1
         carrosel.style.transform = 'translateY('+newHeigth+'px)'
     },3000)
 }

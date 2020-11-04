@@ -1,121 +1,103 @@
 .conteiner1{
     background-color: #34495E;
-    height: 200px;
-    padding-top: 100px;
+    width: 100vw;
     text-align: center;
+    padding: 60px 0;
 }
+
 .conteiner1 h1{
     color: white;
-    padding-top: 30px;
+    margin: 0;
 }
+
 .conteiner2{
     text-align: center;
-    margin-top: 40px;
+    margin: 30px 0;
 }
+
 .conteiner2 h3{
-    font-size: 25px;
+    font-size: 1.6rem;
     color: #34495E;
 }
+
 .conteiner2_1{
     background-color: #F9F9F9;
     border-radius: 4px;
     color: #424242;
     border: 1px solid #eee;
-    margin-top: 20px;
+    margin: 20px 0;
     padding: 20px;  
 }
+
+.conteiner2_1 ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .conteiner2_1 ul li {
     list-style: none;
 }
+
 .conteiner3{
-    margin-top: 80px;
-    margin-left: 60px;
-    width: 90%;
+    margin: 60px auto;
+    padding: 10px;
+    width: 80vw;
     text-align: center;
 }
+
 .conteiner3 h3{
     color: inherit;
-    font-size: 25px;
+    font-size: 1.6rem;
 }
+
 .conteiner3 p{
-    font-size: 16px;
-    line-height: 1.4;
+    font: 1rem/1.4 "Open Sans";
     color: #333333;
 }
+
 .conteiner4{
-    margin-top: 100px;
-    margin-left: 60px;
-    width: 90%;
+    margin: 80px auto;
+    width: 80vw;
     text-align: center;
-    margin-bottom: 150px;
 }
+
 .conteiner4 h3{
     color: inherit;
-    font-size: 25px;
+    font-size: 1.6rem;
 }
+
 .conteiner4 p{
-    font-size: 16px;
-    line-height: 1.4;
+    font: 1rem/1.4 "Open Sans";
+    color: #333333;
     color: #333333;
 }
- h5{
+
+h5{
     text-align: center;
-    margin-bottom: 200px;
-    font-size: 19px;
+    margin: 100px;
+    font-size: 1.2rem;
 }
+
+.main__form--apply{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .btn1{
     color: #fff;
     background-color: #32B796;
     border-color: #2da386;
     border: 1px solid transparent;
     padding: 10px 40px;
-    font-size: 20px;
+    font-size: 1.3rem;
     border-radius: 2px;
-    margin-left: 44%;
-    margin-bottom: 200px;
+    margin: 100px 0;
     cursor: pointer;
 }
 
 @media(max-width:667px){
-.conteiner1{
-   width: 1500px;
-}
-.conteiner1 h1{
-   font-size: 40px;
-}
-.conteiner2{
-   width: 1500px;
-}
-.conteiner2 h3{
-    font-size: 45px;
-}
-.conteiner2_1{
-    font-size: 30px;
-}
-.conteiner3{
-    width: 1500px;
-}
-.conteiner3 h3{
-    font-size: 45px;
-}
-.conteiner3 p{
-    font-size: 30px;
-}
-.conteiner4{
-   width: 1500px;
-}
-.conteiner4 h3{
-    font-size: 45px;
-}
-.conteiner4 p{
-    font-size: 30px;
-}
-h5{
-    font-size: 30px;
-}
-.btn1{
-    font-size: 30px;
-    margin-left: 680px;
-}
 
 }

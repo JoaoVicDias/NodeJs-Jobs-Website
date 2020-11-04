@@ -1,106 +1,155 @@
+main{
+    width: 80vw;
+    height: 100vh;
+    margin: 0 0 0 20vw;
+}
+
 .conteiner1{
-    padding-top: 100px;
+    padding: 70px 0 0 0;
     background-color: #34495E;
-    height: 100%;
-    width: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 20vw;
     z-index: 50;
     position: fixed;
 }
-.conteiner1_1{
-    text-align: center;
-}
+
 .conteiner1_1 h2{
     color: white;
-    font-size:20px;
+    font-size:1.3rem;
 }
+
 .conteiner1_1 p{
     color: white;
-    font-size: 14px;
-    padding-bottom: 35px;
+    font-size: 0.9rem;
 }
+
 .conteiner1_1 a{
     color: #fff;
     background-color: #32B796;
     border-color: #2da386;
     border: 1px solid transparent;
     padding: 6px 12px;
-    font-size: 16px;
+    font-size: 1rem;
     border-radius: 2px;
 }
-.conteiner1_1 a:hover{
+
+.conteiner1_1 a:hover,
+.conteiner1_1 a:active{
     color: #fff;
     background-color: #278f75;
     border-color: #1f735e;
 }
+
 .conteiner1_2{
-    margin-top: 100px;
+    margin: 50px 0 0 0;
 }
-.conteiner1_2 ul li{
-    color: white;
+
+.menu__perfil--itens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    width: 20vw;
+}
+
+.menu__perfil--itens li{
     list-style: none;
     padding: 18px 30px;
-    font-size: 16px;
-    font-style: oblique;
-    margin-left: -39px;
+    width: 100%;
 }
-.conteiner1_2 li:hover{
+
+.menu__perfil--itens li a{
+    color: white;
+    font-size: 1rem;
+}
+
+.conteiner1_2 li:hover,
+.conteiner1_2 li:active{
     background: rgb(199, 194, 194);
 }
+
 .conteiner2 {
-    padding-top: 100px;
+    margin: 50px 0 0 0 ;
     text-align: center;
 }
+
 .conteiner2_1 h2{
     color: #34495E;
-    font-weight: bold;
-    font-size: 25px;
+    font: bold 1.6rem "Open Sans";
 }
+
 .conteiner2_1 p{
     color: black;
     font-weight: bold;
     text-align: left;
-    margin-left: 300px;
-    padding-top: 50px;
+    padding: 50px 0 0 0;
 }
+
+.candidaturas{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .candidaturas a{
     color: inherit;
 }
-.candidaturas a:hover{
+
+.candidaturas a:hover,
+.candidaturas a:active{
     text-decoration: underline;
 }
+
 .candidaturas button{
     color: #fff;
     background-color: #ca1515;
     border-color: #a83a3a;
     border: 1px solid transparent;
     padding: 8px 18px;
-    font-size: 15px;
+    font-size: 0.9rem;
     border-radius: 4px;
-    margin-left: 1200px;
-    margin-top: -400px;
+    position: absolute;
+    top: 20vh;
+    left: 65vw;
     cursor: pointer;
 }
+
 .candidaturas h4{
-    margin-top: 40px;
-    font-size: 28px;
+    font-size: 1.8rem;
+    margin-top: 0;
     color: #34495E;
 }
+
+.candidaturas ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
 .candidaturas ul li{
-    display: inline;
-    margin-right: 20px;
+    list-style: none;
 }
-.candidaturas h6{
-    font-size: 20px;
-    margin-left: 1200px;
-    margin-top: -80px;
+
+.job__confirmation{
+    position: absolute;
+    top: 2vh;
+    left: 60vw;
+    font-size: 1.3rem;
 }
-.candidaturas p{
-    padding-top: 20px;
-}
+
 .pagination{
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 .pagination a{
     text-decoration: none;
@@ -116,53 +165,76 @@
     color: white;
 }
 
+@media(max-width:995px){
+    main{
+        width: 100vw;
+        margin: 0;
+    }
+    
+    .conteiner1{
+        height: 50vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:center;
+    }
+    
+    .conteiner1_1{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
 
-@media(max-width:667px){
-.conteiner1_1 h2{
-    font-size:30px;
+    .conteiner1_1 h2{
+       margin: 0;
+    }
+    
+    .conteiner1_2{
+        margin: 5px 0 0 0;
+    }
+    
+    .menu__perfil--itens{
+        align-items: center;
+        width: 100vw;
+    }
+    
+    .menu__perfil--itens li{
+        list-style: none;
+        padding: 10px 0;
+        width: auto;
+    }
+
+    .conteiner1_2 li:hover,
+    .conteiner1_2 li:active{
+        background: initial;
+    }
+
+    
+    .conteiner2 {
+        margin: 55vh 0 0 0;
+    }
+
+    .candidaturas button{
+        left: 85vw;
+    }
+
+    .job__confirmation{
+        left: 78vw;
+    }
 }
-.conteiner1_1 p{
-    font-size: 16px;
-}
-.conteiner1_1 a{
-    font-size: 20px;
-}
-.conteiner1_2 ul li{
-    font-size: 20px;
-}
-.conteiner2 {
-    text-align: center;
-    width: 1300px;
-}
-.conteiner2_1 h2{
-    color: #34495E;
-    font-weight: bold;
-    font-size: 35px;
-}
-.conteiner2_1 p{
-    font-size: 26px;
-}
-.candidaturas button{
-    padding: 8px 20px;
-    font-size: 20px;
-    margin-left: 1100px;
-}
-.candidaturas h4{
-    font-size: 38px;
-}
-.candidaturas h6{
-    font-size: 20px;
-    margin-left: 1100px;
-    margin-top: -80px;
-}
-.candidaturas ul {
-    font-size: 26px;
-}
-.candidaturas p{
-   font-size: 26px;
-}
-.pagination a{
-    padding: 1rem;
-}
+
+
+
+@media(max-width:735px){
+    .candidaturas button{
+        left: 75vw;
+    }
+
+    .job__confirmation{
+        position: static;
+        margin: 10px 0;
+    }
 
 }

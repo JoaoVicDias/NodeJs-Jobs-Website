@@ -32,7 +32,7 @@ function showBanner(currentL){
     offInterval()
     settingButton(currentL2)
     const widthCarrosel2 = parseInt(getComputedStyle(carrosel_2Iten[0]).width) 
-    let newWidth = (widthCarrosel2 + 40) * currentL2 * -1
+    let newWidth = widthCarrosel2 * currentL2 * -1
     carrosel_2.style.transform = 'translateX('+newWidth+'px)'
     carroselInterval()
 }

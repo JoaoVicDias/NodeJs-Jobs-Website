@@ -1,65 +1,67 @@
 <head>
     <link rel="stylesheet" href="/css/sign_inUser.css">
 </head>
-{{#if success_msg}}
+
+<main>
+    {{#if success_msg}}
     <div class="success_msg">
         {{success_msg}}
     </div>
 {{/if}}
-<div class="conteiner1">
+<section class="conteiner1">
     <h1>Login como candidato</h1>
-</div>
+</section> 
 
-<div class="conteiner2">
-    <div class="conteiner2_1">
+<section class="main__page--content">
+    <div class="main__image--content">
         <img src="/img/sulivan-ace.jpg" alt="">
         <h2>Sullivan Santiago</h2>
         <h4>Partner @ ACE</h4>
-    </div>
-    <div class="conteiner2_2">
         <p>
-            A Programathor foi a melhor ferramenta para seleção <br> que utilizei quando o assunto é
-            : match! Ou seja, trazer o <br> candidato mais preparado para sua vaga de acordo com as <br> habilidades que você precisa.
-             Isso reduziu meu tempo de <br> contratação e me trouxe as melhores opções. Muito mais do <br> que volume, é qualidade. <br>
+            A Programathor foi a melhor ferramenta para seleção  que utilizei quando o assunto é
+            : match! Ou seja, trazer o  candidato mais preparado para sua vaga de acordo com as  habilidades que você precisa.
+             Isso reduziu meu tempo de  contratação e me trouxe as melhores opções. Muito mais do  que volume, é qualidade. <br>
              <span>Com a Programathor consegui contratar meu Co-CTO!</span>
         </p>
-        
     </div>
-</div>
 
-<div class="conteiner3">
-    <div class="conteiner3_1">
-        <ul>
+    <div class="main__form--content">
+
+        <ul class="conteiner3_1">
             <a href="/users/sign_in"> <li class="active" > Login </li> </a>
             <a href="/users/sign_up"> <li class="deactivated"> Cadastre-se </li> </a>
         </ul>
-    </div>
     <div class="conteiner3_2">
-        <form action="/users/sign_in" method="post">
-            {{#if errorMessage}}
-                <div class="error_msg">
-                    {{errorMessage}}
-                </div>
+            <form action="/users/sign_in" method="post">
+                {{#if errorMessage}}
+                    <div class="error_msg">
+                        {{errorMessage}}
+                    </div>
+                    {{/if}}
+                {{#if error_msg}}
+                    <div class="error_msg">
+                        {{error_msg}}
+                    </div>
                 {{/if}}
-            {{#if error_msg}}
-                <div class="error_msg">
-                    {{error_msg}}
-                </div>
-            {{/if}}
-            <label for="email">E-mail</label><br>
-                <input class={{email2}} placeholder="Seu e-mail" type="email" name="email" id="email"><br>
+                <label for="email">E-mail</label><br>
+                    <input class={{email2}} placeholder="Seu e-mail" type="email" name="email" id="email"><br>
 
-            <label for="password">Senha</label><br>
-                <input class={{password_2}} placeholder="******" type="password" name="password" id="password"><br>
-                <input type="hidden" name="_csrf" value={{csrfToken}}>
-            <button type="submit">Login</button>
-        </form>
-        <div class="conteiner3_3">
-            <a href="/companies/sign_in">Eu sou uma empresa ></a>
+                <label for="password">Senha</label><br>
+                    <input class={{password_2}} placeholder="******" type="password" name="password" id="password"><br>
+                    <input type="hidden" name="_csrf" value={{csrfToken}}>
+                <button type="submit">Login</button>
+            </form>
+            
+                <a class="conteiner3_3" href="/companies/sign_in">Eu sou uma empresa</a>
         </div>
     </div>
-</div>
 
+</section>
+
+
+
+
+</main>
 
 
 {{>end}}

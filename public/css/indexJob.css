@@ -1,62 +1,78 @@
 .conteiner1{
     background-color: #35618d;
-    padding-top: 100px;
-    width: 100%;
-    min-height: 38vh;
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
-.conteiner1 h3{
-    text-align: center;
+
+.fisrt__section--title{
     color: white;
-    margin: 0 0 30px 0;
-    font-size: 32px;
-    padding-top: 40px;
+    font-size: 2rem;
 }
-.conteiner1 input{
-    margin-top: 40px;
-    margin-left: 35%;
+
+.main__search--input{
     padding: 10px 70px;
-    font-size: 20px;
+    font-size: 1.3rem;
     border-radius: 2px;
     border: none;
 }
-.conteiner1 button{
+
+.main__search--btn{
     color: #fff;
     background-color: #32B796;
     border: none;
     padding: 7px 12px;
-    font-size: 20px;
+    font-size: 1.2rem;
     border-radius: 2px;
     cursor: pointer;
 }
+
 .vagas{
-    text-align: center;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.vagas:hover{
+
+.vagas:hover,
+.vagas:active{
    background: rgb(230, 228, 228);
 }
-.vagas h4{
-    margin-top: 40px;
-    font-size: 28px;
+
+.main__job--title{
+    font-size: 1.7rem;
     color: #34495E;
 }
-.vagas ul li{
-    display: inline;
-    margin-right: 20px;
+
+.main__job--itens{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.main__job--item{
     color: initial;
+    margin: 0.2rem 0;
+    list-style: none;
 }
-.vagas h6{
-    font-size: 20px;
-    margin-left: 1200px;
-    margin-top: -80px;
-}
-.vagas p{
-    padding-top: 20px;
+
+.main__job--information{
     color: initial;
+    font-size: 0.8rem;
 }
+
+.main__job--line{
+    width: 100vw;
+}
+
 .pagination{
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 .pagination a{
     text-decoration: none;
@@ -71,46 +87,24 @@
     background: #35618d;
     color: white;
 }
+
 .not_found{
     text-align: center;
-    margin-bottom: 150px;
+    margin: 50px 0;
 }
 
-@media (max-width:667px){
-.conteiner1{
-    width: 1500px;
-}
-.conteiner1 h3{
-    font-size: 42px;
-}
-.conteiner1 input{
-    padding: 10px 100px;
-}
-.conteiner1 button{
-    padding: 7px 20px;
-    font-size: 23px;
-}
-.vagas{
-    text-align: center;
-    width: 1500px;
-}
-.vagas h4{
-    font-size: 40px;
-}
-.vagas ul li{
-    font-size: 30px;
-}
-.vagas p{
-    font-size: 30px;
-}
-.pagination{
-    width: 1500px;
-}
-.pagination a{
-    font-size: 25px;
-    padding: 1rem;
-}
-
-
-
+@media (max-width:640px){
+    .fisrt__section--title{
+        font-size: 1.7rem;
+    }
+    
+    .main__search--input{
+        font-size: 1rem;
+        width: 100vw;
+    }
+    
+    .main__search--btn{
+        font-size: 1rem;
+        margin: 10px 0;
+    }
 }

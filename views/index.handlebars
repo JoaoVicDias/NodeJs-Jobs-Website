@@ -1,15 +1,12 @@
 <head>
     <link rel="stylesheet" href="css/index.css">
 </head>
-<div class="conteiner1">
-    <img src="img/indeximg1.jpg" alt="">
+<main>
+<section class="conteiner1">
     <div class="text1">
-
-
-
-
-        <h1>OPORTUNIDADES PARA </h1>   
-        <h1 class="h1_2">PROGRAMADOR</h1>    
+        <h1 class="section_index--title">OPORTUNIDADES PARA <br>
+            PROGRAMADOR
+        </h1>  
         <section class="carrosel1">
             <div class="carrosel2">
                 <h1 class="text2">JAVA</h1>
@@ -21,59 +18,58 @@
                 <h1 class="text2">MOBILE</h1>
             </div>
         </section> 
+        <div class="text3"><a href="/users/sign_up"><strong>VER NOSSAS VAGAS</strong></a></div>
+        <p class="section_index--text">Tenha acesso a diversas oportunidades para desenvolvedores
+Encontre a vaga para programador(a) Front-End, Back-End, Mobile ou Full Stack que você estava procurando</p>
     </div>
-    <div class="text3"><a href="/users/sign_up"><strong>VER NOSSAS VAGAS</strong></a></div>
-    </div>
+</section>
+ 
 
-<div class="conteiner2">
-    <ul>
-    <li><div class="conteiner2text">
-        <img src="img/tick-inside-circle.png" alt="">
-        <h3>Só para programadores</h3>
-        <p>Somos uma plataforma 100% dedicada ao <br><strong>recrutamento de programadores.</strong></p>
-    </div></li>
-    <li><div class="conteiner2text">
-        <img src="img/tick-inside-circle.png" alt="">
-        <h3>100% gratuito</h3>
-        <p>Basta se cadastrar e completar o perfil para se <br> candidatar <strong>gratuitamente</strong> a qualquer vaga <br> compatível com você.</p>
-    </div></li>
-    <li><div class="conteiner2text">
-        <img src="img/tick-inside-circle.png" alt="">
-        <h3>Alertas de Matching</h3>
-        <p>Nosso sistema de matching permite que você <br> <strong>seja notificado</strong> apenas em casos de <br> compatibilidade com uma nova vaga.</p>
-    </div></li>
-    </ul>
-    
-</div>
+<section class="conteiner2">
+    <article class="informations__list--item">
+        <h3><img class="conteiner2__list--img" src="img/tick-inside-circle.png" alt=""> Só para programadores</h3>
+        <p class="conteiner2__list--p">Somos uma plataforma 100% dedicada ao <br> <strong> recrutamento de programadores.</strong></p>
+    </article>
+    <article class="informations__list--item">
+        <h3><img class="conteiner2__list--img" src="img/tick-inside-circle.png" alt=""> 100% gratuito</h3>
+        <p class="conteiner2__list--p">Basta se cadastrar e completar o perfil para se candidatar <br> <strong>gratuitamente</strong> a qualquer vaga compatível com você.</p>
+    </article>
+    <article class="informations__list--item">
+        <h3><img class="conteiner2__list--img" src="img/tick-inside-circle.png" alt=""> Alertas de Matching</h3>
+        <p class="conteiner2__list--p">Nosso sistema de matching permite que você <br> <strong>seja notificado</strong> apenas em casos de compatibilidade <br> com uma nova vaga.</p>
+     </article>
+</section>
 
-<div class="conteiner3">
+<section class="conteiner3">
         <h2>Nossas últimas vagas</h2>
-        {{#if job}}
-        {{#each job}}
-        <ul>
-        <a href="/job/{{_id}}">
-            <li>
-                <div class="conteiner3Text">
-                    <h3>{{title}}</h3>
-                    <span>{{companyId.name}} /  {{companyId.city}} / R${{salary}}  </span>
-                    <p>{{description}}</p>
-                </div>
-            </li>
-        </a>
-        </ul>
-    {{/each}}
-        <a class="conteiner3btn1" href="/jobs/?page=1">VER TODAS AS VAGAS</a><br><br><br><br><br>
-        {{else}}
-        <h2> Estamos sem vagas no momento</h2>
-        {{/if}}
-</div>
+       <article class="job__list">
+            {{#if job}}
+            {{#each job}}
+                <ul class="job__list--itens">
+                <a href="/job/{{_id}}">
+                    <li>
+                        <div class="conteiner3Text">
+                            <h3>{{title}}</h3>
+                            <span>{{companyId.name}} /  {{companyId.city}} / R${{salary}}  </span>
+                            <p>{{description}}</p>
+                        </div>
+                </li>
+                </a>
+                </ul>
+            {{/each}}
+       </article>
+        <div class="conteiner3btn1"><a href="/jobs/?page=1">VER TODAS AS VAGAS</a></div>
+            {{else}}
+                <h2> Estamos sem vagas no momento</h2>
+            {{/if}}
+</section>
 
-<div class="conteiner4">
+<section class="conteiner4">
     <h2>Algumas das centenas de empresas que recrutam na ProgramaThor</h2>
-    <img src="img/empresa-parceira.png" alt="">
-</div>
+    <img class="companys-img" src="img/empresa-parceira.png" alt="">
+</section>
 
-<div class="conteiner5">
+<section class="conteiner5">
     <h2>Depoimentos Desenvolvedores</h2>
     <section class="carrosel2-1">
         <div class="carrosel2-2">
@@ -89,7 +85,7 @@
             </h5>
             <h5 class="carroselIten">
                 Depois de 4 meses procurando <br> em vários sites de emprego, fiz meu  cadastro na ProgramaThor, <br> que por seu foco específico 
-                 para programadores <br> me permitiu facilmente encontrar uma vaga com o match de 94%, <br> em 3 semanas consegui recolocação no mercado de trabalho. <br> Obrigado Equipe ProgramaThor!. <br>
+                 para programadores <br> me permitiu facilmente encontrar uma vaga com o  <br> match de 94%, em 3 semanas consegui recolocação no mercado de trabalho. <br> Obrigado Equipe ProgramaThor!. <br>
                 <br> -Eduardo Garcia <br>
                     Desenvolvedor Full Stack
             </h5>
@@ -97,18 +93,13 @@
         <button class="carrosel__btn  carrosel__btn--prev"><</button>
         <button class="carrosel__btn  carrosel__btn--next">></button>
     </section> 
-</div>
+</section>
 
-<div class="conteiner6">
+<section class="conteiner6">
     <h2>This website is not working in real life</h2>
     <p>this website is just a student's job and should not be taken seriously</p>
-</div>
-
-
-
-
-
-
+</section>
+</main>
 
 
 {{>end}}

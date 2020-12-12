@@ -16,7 +16,12 @@ I developed this site with the intention of improving my knowledge in web progra
 
 
 ### How is the site?
-  ![](jobWebsite(1).gif)
+  #### For candidates:
+   ![](jobWebsite(1).gif)
+   
+   ### For businesses:
+   ![](jobWebsite(2).gif)
+   
 
 
 ### Stack 

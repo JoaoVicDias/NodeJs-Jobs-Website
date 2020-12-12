@@ -15,6 +15,10 @@ I developed this site with the intention of improving my knowledge in web progra
 - You can as a candidate can see the job vacancies
 
 
+### How is the site?
+  ![](jobWebsite(1).gif)
+
+
 ### Stack 
 1. NodeJS - as server side
 2. ExpressJS - as HTTP framework
